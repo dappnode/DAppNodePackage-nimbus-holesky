@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NETWORK="prater"
+NETWORK="holesky"
 VALIDATOR_PORT=3500
 
 DATA_DIR="/home/user/nimbus-eth2/build/data"
@@ -10,7 +10,7 @@ TOKEN_FILE="${DATA_DIR}/auth-token"
 # Create validators dir
 mkdir -p ${VALIDATORS_DIR}
 
-case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER in
+case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY in
 "goerli-geth.dnp.dappnode.eth")
     HTTP_ENGINE="http://goerli-geth.dappnode:8551"
     ;;
@@ -24,13 +24,13 @@ case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER in
     HTTP_ENGINE="http://goerli-erigon.dappnode:8551"
     ;;
 *)
-    echo "Unknown value for _DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER: $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER"
-    HTTP_ENGINE=$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_PRATER
+    echo "Unknown value for _DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY: $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY"
+    HTTP_ENGINE=$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY
     ;;
 esac
 
 # MEVBOOST: https://docs.teku.consensys.net/en/latest/HowTo/Builder-Network/
-if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_PRATER" == "true" ]; then
+if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" == "true" ]; then
     echo "MEVBOOST is enabled"
     MEVBOOST_URL="http://mev-boost.mev-boost-goerli.dappnode:18550"
     EXTRA_OPTS="${EXTRA_OPTS} --payload-builder=true --payload-builder-url=${MEVBOOST_URL}"
