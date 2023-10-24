@@ -1,0 +1,45 @@
+{
+  "name": "nimbus-prater.dnp.dappnode.eth",
+  "version": "0.1.20",
+  "upstreamVersion": "v23.9.0",
+  "upstreamRepo": "status-im/nimbus-eth2",
+  "upstreamArg": "UPSTREAM_VERSION",
+  "architectures": ["linux/amd64"],
+  "shortDescription": "Nimbus Prater Beacon chain + validator",
+  "description": "Nimbus implementation of the Beacon Chain client + validator for the Prater testnet",
+  "type": "service",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "pablo <pablo@dappnode.io> (https://github.com/pablomendezroyo)",
+    "marce <mgarciate@dappnode.io> (https://github.com/mgarciate)"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dappnode/DAppNodePackage-nimbus-prater.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-nimbus-prater/issues"
+  },
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.58"
+  },
+  "categories": ["Blockchain", "ETH2.0"],
+  "links": {
+    "ui": "http://brain.web3signer-prater.dappnode/",
+    "homepage": "https://nimbus.team/",
+    "readme": "https://github.com/dappnode/DAppNodePackage-nimbus-prater",
+    "docs": "https://www.nimbusproject.org/docs"
+  },
+  "chain": {
+    "driver": "ethereum-beacon-chain",
+    "serviceName": "beacon-validator",
+    "portNumber": 4500
+  },
+  "globalEnvs": [
+    {
+      "envs": ["EXECUTION_CLIENT_PRATER", "MEVBOOST_PRATER"],
+      "services": ["beacon-validator"]
+    }
+  ]
+}
