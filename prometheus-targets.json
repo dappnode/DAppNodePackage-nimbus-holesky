@@ -1,11 +1,9 @@
-[ 
+[
   {
-      "labels": {
-          "package": "nimbus-prater.dnp.dappnode.eth",
-          "service": "beacon-validator.nimbus-prater.dappnode"
-      },
-      "targets": [
-          "beacon-validator.nimbus-prater.dappnode:8008"
-      ]
+    "labels": {
+      "package": "nimbus-holesky.dnp.dappnode.eth",
+      "service": "beacon-validator.nimbus-holesky.dappnode"
+    },
+    "targets": ["beacon-validator.nimbus-holesky.dappnode:8008"]
   }
 ]
