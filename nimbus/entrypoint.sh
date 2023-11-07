@@ -41,7 +41,7 @@ LANG=$oLang LC_ALL=$oLcAll
         --network=${NETWORK} \
         --trusted-node-url=${CHECKPOINT_SYNC_URL} \
         --backfill=false \
-        --data-dir=//home/user/nimbus-eth2/build/data
+        --data-dir=${DATA_DIR}
 
 [[ -n $WEB3_BACKUP_URL ]] && EXTRA_OPTS="--web3-url=${WEB3_BACKUP_URL} ${EXTRA_OPTS}"
 
