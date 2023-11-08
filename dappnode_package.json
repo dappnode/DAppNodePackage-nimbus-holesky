@@ -18,7 +18,7 @@
     "url": "https://github.com/dappnode/DAppNodePackage-nimbus-holesky/issues"
   },
   "requirements": {
-    "minimumDappnodeVersion": "0.2.82"
+    "minimumDappnodeVersion": "0.2.83"
   },
   "categories": ["Blockchain", "ETH2.0"],
   "links": {
