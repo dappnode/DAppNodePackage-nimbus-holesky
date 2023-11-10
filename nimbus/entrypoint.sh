@@ -12,15 +12,19 @@ mkdir -p ${VALIDATORS_DIR}
 
 case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY in
 "holesky-geth.dnp.dappnode.eth")
+    echo "Using holesky-geth.dnp.dappnode.eth"
     HTTP_ENGINE="http://holesky-geth.dappnode:8551"
     ;;
 "holesky-nethermind.dnp.dappnode.eth")
+    echo "Using holesky-nethermind.dnp.dappnode.eth"
     HTTP_ENGINE="http://holesky-nethermind.dappnode:8551"
     ;;
 "holesky-besu.dnp.dappnode.eth")
+    echo "Using holesky-besu.dnp.dappnode.eth"
     HTTP_ENGINE="http://holesky-besu.dappnode:8551"
     ;;
 "holesky-erigon.dnp.dappnode.eth")
+    echo "Using holesky-erigon.dnp.dappnode.eth"
     HTTP_ENGINE="http://holesky-erigon.dappnode:8551"
     ;;
 *)
