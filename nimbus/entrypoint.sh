@@ -33,6 +33,12 @@ case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY in
     ;;
 esac
 
+if [ -n "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" ] && [ "$_DAPPNODE_GLOBAL_MEVBOOST_HOLESKY" == "true" ]; then
+    echo "MEVBOOST is enabled"
+    MEVBOOST_URL="http://mev-boost.mev-boost-holesky.dappnode:18550"
+    EXTRA_OPTS="${EXTRA_OPTS} --payload-builder=true --payload-builder-url=${MEVBOOST_URL}"
+fi
+
 #Handle Graffiti Character Limit
 oLang=$LANG oLcAll=$LC_ALL
 LANG=C LC_ALL=C
