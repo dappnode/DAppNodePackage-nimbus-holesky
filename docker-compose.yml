@@ -4,7 +4,7 @@ services:
     build:
       context: nimbus
       args:
-        UPSTREAM_VERSION: v24.3.0
+        UPSTREAM_VERSION: v24.5.0
     restart: unless-stopped
     stop_grace_period: 1m
     environment:
@@ -17,9 +17,9 @@ services:
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
     ports:
-      - "9606:9606/tcp"
-      - "9606:9606/udp"
+      - 9606:9606/tcp
+      - 9606:9606/udp
     volumes:
-      - "nimbus-holesky-data:/home/user/nimbus-eth2/build/data"
+      - nimbus-holesky-data:/home/user/nimbus-eth2/build/data
 volumes:
   nimbus-holesky-data: {}
